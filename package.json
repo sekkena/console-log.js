@@ -1,0 +1,14 @@
+{
+  "name": "rainbow-log",
+  "version": "1.0.2",
+  "description": "package, that change console color text ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dir-control": "^1.0.2"
+  }
+}
