@@ -1,14 +1,30 @@
 {
-  "name": "rainbow-log",
-  "version": "1.0.2",
-  "description": "package, that change console color text ",
+  "name": "console-log.js",
+  "version": "1.0.0",
+  "description": "console-log.js, is a simple Node.js package that allows you to customize console colors for better visual representation of logs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sekkena/console-log.js.git"
+  },
+  "keywords": [
+    "console",
+    "bulk",
+    "color",
+    "rainbow",
+    "colors",
+    "npm",
+    "log",
+    "console-log",
+    "test"
+  ],
+  "author": "sekkena",
   "license": "ISC",
-  "dependencies": {
-    "dir-control": "^1.0.2"
-  }
+  "bugs": {
+    "url": "https://github.com/sekkena/console-log.js/issues"
+  },
+  "homepage": "https://github.com/sekkena/console-log.js#readme"
 }
