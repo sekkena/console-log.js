@@ -1,30 +1,22 @@
 //index.js
-//dev by Sekkena2#5709
-const resetColor = "\x1b[0m";
-const brightBlackColor = "\x1b[90m";
-const brightRedColor = "\x1b[91m";
-const brightGreenColor = "\x1b[92m";
-const brightYellowColor = "\x1b[93m";
-const brightBlueColor = "\x1b[94m";
-const brightMagentaColor = "\x1b[95m";
-const brightCyanColor = "\x1b[96m";
-const brightWhiteColor = "\x1b[97m";
-const blackBackgroundColor = "\x1b[40m";
-const redBackgroundColor = "\x1b[41m";
-const greenBackgroundColor = "\x1b[42m";
-const yellowBackgroundColor = "\x1b[43m";
-const blueBackgroundColor = "\x1b[44m";
-const magentaBackgroundColor = "\x1b[45m";
-const cyanBackgroundColor = "\x1b[46m";
-const whiteBackgroundColor = "\x1b[47m";
-const orangeColor = "\x1b[38;5;208m";
-const limeColor = "\x1b[92m";
-const tealColor = "\x1b[36m";
+//Dev by Sekkena2#5709
 
+//rest color (turn console color back to normal)
+const resetColor = "\x1b[0m";
+
+///function that send the color in console
 function colorizeText(text, color) {
     return `${color}${text}${resetColor}`;
 }
 
+/*
+function colorTheText(text, color) {
+    return `${color}${text}${resetColor}`;
+}
+*/
+
+
+//colors
 const colors = {
     red: (text) => colorizeText(text, "\x1b[31m"),
     yellow: (text) => colorizeText(text, "\x1b[33m"),
@@ -32,30 +24,67 @@ const colors = {
     green: (text) => colorizeText(text, "\x1b[32m"),
     magenta: (text) => colorizeText(text, "\x1b[35m"),
     cyan: (text) => colorizeText(text, "\x1b[36m"),
-    brightBlack: (text) => colorizeText(text, brightBlackColor),
-    brightRed: (text) => colorizeText(text, brightRedColor),
-    brightGreen: (text) => colorizeText(text, brightGreenColor),
-    brightYellow: (text) => colorizeText(text, brightYellowColor),
-    brightBlue: (text) => colorizeText(text, brightBlueColor),
-    brightMagenta: (text) => colorizeText(text, brightMagentaColor),
-    brightCyan: (text) => colorizeText(text, brightCyanColor),
-    brightWhite: (text) => colorizeText(text, brightWhiteColor),
-    blackBackground: (text) => colorizeText(text, blackBackgroundColor),
-    redBackground: (text) => colorizeText(text, redBackgroundColor),
-    greenBackground: (text) => colorizeText(text, greenBackgroundColor),
-    yellowBackground: (text) => colorizeText(text, yellowBackgroundColor),
-    blueBackground: (text) => colorizeText(text, blueBackgroundColor),
-    magentaBackground: (text) => colorizeText(text, magentaBackgroundColor),
-    cyanBackground: (text) => colorizeText(text, cyanBackgroundColor),
-    whiteBackground: (text) => colorizeText(text, whiteBackgroundColor),
-    orange: (text) => colorizeText(text, orangeColor),
-    lime: (text) => colorizeText(text, limeColor),
-    teal: (text) => colorizeText(text, tealColor),
+    brightBlack: (text) => colorizeText(text, "\x1b[90m"),
+    brightRed: (text) => colorizeText(text, "\x1b[91m"),
+    brightGreen: (text) => colorizeText(text, "\x1b[92m"),
+    brightYellow: (text) => colorizeText(text, "\x1b[93m"),
+    brightBlue: (text) => colorizeText(text, "\x1b[94m"),
+    brightMagenta: (text) => colorizeText(text, "\x1b[95m"),
+    brightCyan: (text) => colorizeText(text, "\x1b[96m"),
+    brightWhite: (text) => colorizeText(text, "\x1b[97m"),
+    orange: (text) => colorizeText(text, "\x1b[38;5;208m"),
+    lime: (text) => colorizeText(text, "\x1b[92m"),
+    teal: (text) => colorizeText(text, "\x1b[36m"),
+    pink: (text) => colorizeText(text, "\x1b[38;5;206m"),
+    lavender: (text) => colorizeText(text, "\x1b[38;5;183m"),
+    peach: (text) => colorizeText(text, "\x1b[38;5;203m"),
+    turquoise: (text) => colorizeText(text, "\x1b[38;5;48m"),
+    indigo: (text) => colorizeText(text, "\x1b[38;5;54m"),
+    olive: (text) => colorizeText(text, "\x1b[38;5;58m"),
+    maroon: (text) => colorizeText(text, "\x1b[38;5;88m"),
+    navy: (text) => colorizeText(text, "\x1b[38;5;17m"),
+    coral: (text) => colorizeText(text, "\x1b[38;5;209m"),
+    slate: (text) => colorizeText(text, "\x1b[38;5;104m"),
+    crimson: (text) => colorizeText(text, "\x1b[38;5;196m"),
+    chocolate: (text) => colorizeText(text, "\x1b[38;5;94m"),
+    plum: (text) => colorizeText(text, "\x1b[38;5;182m"),
+    beige: (text) => colorizeText(text, "\x1b[38;5;187m"),
+    sepia: (text) => colorizeText(text, "\x1b[38;5;130m"),
+    bold: (text) => colorizeText(text, "\x1b[1m"),
+    underline: (text) => colorizeText(text, "\x1b[4m"),
+    strikethrough: (text) => colorizeText(text, "\x1b[9m"),
+    randomRainbow: (text) => rainbowText(text),
     random: (text) => {
         const randomColorCode = "\x1b[38;5;" + Math.floor(Math.random() * 256) + "m";
         return colorizeText(text, randomColorCode);
     },
 };
 
+const backcolors = {
+    black: (text) => colorizeText(text, "\x1b[40m"),
+    red: (text) => colorizeText(text, "\x1b[41m"),
+    green: (text) => colorizeText(text, "\x1b[42m"),
+    yellow: (text) => colorizeText(text, "\x1b[43m"),
+    blue: (text) => colorizeText(text, "\x1b[44m"),
+    magenta: (text) => colorizeText(text, "\x1b[45m"),
+    cyan: (text) => colorizeText(text, "\x1b[46m"),
+    white: (text) => colorizeText(text, "\x1b[47m"),
+};
 
-module.exports = colors;
+const format = {
+    bold: (text) => colorizeText(text, "\x1b[1m"),
+    underline: (text) => colorizeText(text, "\x1b[4m"),
+    strikethrough: (text) => colorizeText(text, "\x1b[9m"),
+};
+
+// Random color per letter
+function rainbowText(text) {
+    let rainbowText = '';
+    for (let i = 0; i < text.length; i++) {
+        const randomColorCode = "\x1b[38;5;" + Math.floor(Math.random() * 256) + "m";
+        rainbowText += colorizeText(text[i], randomColorCode);
+    }
+    return rainbowText;
+}
+
+module.exports = { colors, backcolors, format };
