@@ -13,11 +13,12 @@ npm install console-log.js
 
 ## Example
 ```javascript
-const colors = require('console-log.js');
+const { colors, backcolor } = require('console-log.js');
 
 console.log(colors.yellow('Test with yellow'));
-console.log(colors.blue('This is a blue message with background color', 'bgWhite'));
-
+console.log(colors.bold("Bold Text"));
+console.log(colors.underline("Underlined Text"));
+console.log(colors.strikethrough("Strikethrough Text"));
+console.log(colors.randomRainbow("Random Rainbow Text"));
+console.log(backcolor.green('This is a green message with background color'));
 ```
-
-More Update Soon !!
